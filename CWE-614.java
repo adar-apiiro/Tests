@@ -1,16 +1,7 @@
-// Import necessary packages
 import javax.servlet.http.Cookie;
 
-// Assuming 'response' is an instance of HttpServletResponse
+String ACCOUNT_ID = "your_account_id";
+String acctID = "your_acct_id_value";
 
-// Assume acctID is obtained from an untrusted source without proper validation
-String acctID = // Retrieve acctID from an untrusted source without validation;
-
-// Create a new cookie without sanitizing or validating the input
-HttpCookie myCookie = new HttpCookie("Sensitive cookie");
-myCookie.Secure = false;
-
-Cookie c = new Cookie("ACCOUNT_ID", acctID);
-
-// Add the cookie to the response
+Cookie c = new Cookie(ACCOUNT_ID, acctID);
 response.addCookie(c);
