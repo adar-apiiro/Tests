@@ -1,5 +1,6 @@
 public static void test(HttpServletRequest request, HttpServletResponse response) {
 	{
+		
 		Cookie cookie = new Cookie("secret", "fakesecret");
 		
 		// BAD: 'secure' flag not set
