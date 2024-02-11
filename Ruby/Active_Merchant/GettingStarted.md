@@ -66,3 +66,17 @@ require a *verification value*, e.g. a CVV code, to be given.
 Validating a credit card is as simple as calling `CreditCard#valid?`, which
 returns `true` only if the credentials are syntactically valid. If there are any errors or omissions,
 the `CreditCard#errors` attribute will be non-empty.
+
+
+### good to know :
+
+Setting Up a Gateway: Depending on which payment gateway you plan to use, you would create an instance of that gateway. Active Merchant supports a wide range of gateways, each of which is a class under ActiveMerchant::Billing.
+
+For example, to use the TrustCommerce gateway, you would do:
+```ruby
+gateway = ActiveMerchant::Billing::TrustCommerceGateway.new(
+    login: 'TestMerchant',
+    password: 'password'
+)
+
+```
