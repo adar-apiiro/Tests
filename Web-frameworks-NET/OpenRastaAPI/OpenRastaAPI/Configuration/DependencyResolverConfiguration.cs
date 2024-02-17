@@ -1,0 +1,1 @@
+// Placeholder for OpenRastaAPI/Configuration/DependencyResolverConfiguration.cs
