@@ -1,0 +1,1 @@
+// Placeholder for BlazorAPI/Data/WeatherForecastService.cs
