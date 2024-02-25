@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenRasta.Core" Version="2.6.0" />
+    <PackageReference Include="OpenRasta.Hosting.InMemory" Version="2.6.0" />
+  </ItemGroup>
+
+</Project>
