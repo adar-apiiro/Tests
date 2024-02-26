@@ -23,4 +23,5 @@ class Http4kServer {
 fun main() {
     val server = Http4kServer()
     server.startServer()
+    val server1 = routes()
 }
