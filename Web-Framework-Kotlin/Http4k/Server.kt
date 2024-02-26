@@ -8,12 +8,19 @@ import org.http4k.routing.routes
 import org.http4k.server.Jetty
 import org.http4k.server.asServer
 
+class Http4kServer {
+    fun startServer() {
+        val app: HttpHandler = routes(
+            "/" bind GET to { _: Request -> Response(OK).body("Hello, Http4k!") }
+        )
+
+        val server = app.asServer(Jetty(8080)).start()
+
+        println("Server started on " + server.port())
+    }
+}
+
 fun main() {
-    val app: HttpHandler = routes(
-        "/" bind GET to { _: Request -> Response(OK).body("Hello, Http4k!") }
-    )
-
-    val server = app.asServer(Jetty(8080)).start()
-
-    println("Server started on " + server.port())
+    val server = Http4kServer()
+    server.startServer()
 }
