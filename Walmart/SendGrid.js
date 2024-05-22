@@ -1,5 +1,6 @@
 // Require the SendGrid library
 const sgMail = require('@sendgrid/mail');
+const sendGridResponse = await sgMail.send(email);
 
 // Set your SendGrid API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
